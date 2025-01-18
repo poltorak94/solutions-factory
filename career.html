@@ -14,15 +14,33 @@
         <img src="./assets/img/logo.png" alt="">
       </a>
       <div class="header__nav">
-        <a href="services.html" class="header__nav-item">services</a>
-        <a href="#" class="header__nav-item">outsourcing</a>
-        <a href="cases.html" class="header__nav-item">cases</a>
-        <a href="career.html" class="header__nav-item header__nav-item--active">career</a>
-        <a href="contacts.html" class="header__nav-item">contacts</a>
+        <div class="header__nav-items">
+          <div class="dropdown-menu">
+            <a href="services.html" class="header__nav-item">services <img src="./assets/img/menu-polygon.png" alt=""></a>
+            <div class="dropdown-menu__container">
+              <div class="dropdown-menu__items">
+                <a href="#" class="header__nav-item">Implementation D365 and Power Platform</a>
+                <a href="#" class="header__nav-item">Support D365 / Axapta</a>
+                <a href="#" class="header__nav-item">Implementation 1С product</a>
+                <a href="#" class="header__nav-item">DevOps and DevSecOps</a>
+                <a href="#" class="header__nav-item">Custom development</a>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="header__nav-item">outsourcing</a>
+          <a href="cases.html" class="header__nav-item">cases</a>
+          <a href="career.html" class="header__nav-item header__nav-item--active">career</a>
+          <a href="contacts.html" class="header__nav-item">contacts</a>
+        </div>
         <div class="header__switcher">
           <a href="#" class="header__switcher-item header__switcher-item--active">en</a>
           <a href="#" class="header__switcher-item">ru</a>
         </div>
+        <a href="#" class="header__burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
       </div>
     </div>
   </header>
@@ -40,7 +58,7 @@
     <section class="career-feauters container block">
       <h2 class="title">career</h2>
       <div class="desc">Join us, and together we will create something unique and interesting!</div>
-      <div class="trust__items">
+      <div class="trust__items trust__items--career">
         <div class="trust__item">
           <div class="trust__item-img-holder">
             <img src="./assets/img/t-1.png" alt="">

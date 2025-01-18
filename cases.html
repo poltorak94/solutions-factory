@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="./assets/libs/modal/jquery.modal.min.css" rel="stylesheet">
   <link href="./assets/css/style.css" rel="stylesheet">
   <title>Solutions Factory</title>
 </head>
@@ -14,15 +15,33 @@
         <img src="./assets/img/logo.png" alt="">
       </a>
       <div class="header__nav">
-        <a href="services.html" class="header__nav-item">services</a>
-        <a href="#" class="header__nav-item">outsourcing</a>
-        <a href="cases.html" class="header__nav-item header__nav-item--active">cases</a>
-        <a href="career.html" class="header__nav-item">career</a>
-        <a href="contacts.html" class="header__nav-item">contacts</a>
+        <div class="header__nav-items">
+          <div class="dropdown-menu">
+            <a href="services.html" class="header__nav-item">services <img src="./assets/img/menu-polygon.png" alt=""></a>
+            <div class="dropdown-menu__container">
+              <div class="dropdown-menu__items">
+                <a href="#" class="header__nav-item">Implementation D365 and Power Platform</a>
+                <a href="#" class="header__nav-item">Support D365 / Axapta</a>
+                <a href="#" class="header__nav-item">Implementation 1С product</a>
+                <a href="#" class="header__nav-item">DevOps and DevSecOps</a>
+                <a href="#" class="header__nav-item">Custom development</a>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="header__nav-item">outsourcing</a>
+          <a href="cases.html" class="header__nav-item header__nav-item--active">cases</a>
+          <a href="career.html" class="header__nav-item">career</a>
+          <a href="contacts.html" class="header__nav-item">contacts</a>
+        </div>
         <div class="header__switcher">
           <a href="#" class="header__switcher-item header__switcher-item--active">en</a>
           <a href="#" class="header__switcher-item">ru</a>
         </div>
+        <a href="#" class="header__burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
       </div>
     </div>
   </header>
@@ -49,7 +68,7 @@
           <div class="cases-item__desc">
             "Should we migrate to a cloud platform?" – This is a question which every IT manager asks...
           </div>
-          <a href="#" class="cases-item__more">Learn more</a>
+          <a href="#modal-case" class="cases-item__more" rel="modal:open">Learn more</a>
         </div>
         <div class="cases-item">
           <div class="cases-item__title">DevOps for D365FO</div>
@@ -57,7 +76,7 @@
             When it comes to cloud deployments, one of the key advantages of migrating to the cloud version of Dynamics
             365 Finance...
           </div>
-          <a href="#" class="cases-item__more">Learn more</a>
+          <a href="#modal-case" class="cases-item__more" rel="modal:open">Learn more</a>
         </div>
         <div class="cases-item">
           <div class="cases-item__title">Power Platform using</div>
@@ -65,21 +84,21 @@
             One of the advantages of using Dynamics 365 Finance and Operations (D365FO) in the cloud is the ability
             to...
           </div>
-          <a href="#" class="cases-item__more">Learn more</a>
+          <a href="#modal-case" class="cases-item__more" rel="modal:open">Learn more</a>
         </div>
         <div class="cases-item">
           <div class="cases-item__title">Integration with the Shopify e-commerce platform</div>
           <div class="cases-item__desc">
             Shopify is a popular e-commerce platform used for both online stores...
           </div>
-          <a href="#" class="cases-item__more">Learn more</a>
+          <a href="#modal-case" class="cases-item__more" rel="modal:open">Learn more</a>
         </div>
         <div class="cases-item">
           <div class="cases-item__title">Using Electronic Reporting for importing invoices from suppliers</div>
           <div class="cases-item__desc">
             The Electronic Reporting (ER) functionality has become the new standard...
           </div>
-          <a href="#" class="cases-item__more">Learn more</a>
+          <a href="#modal-case" class="cases-item__more" rel="modal:open">Learn more</a>
         </div>
         <div class="cases-item">
           <div class="cases-item__title">Audit D365FO</div>
@@ -87,14 +106,14 @@
             One of our key services is conducting audits for the implementation of Dynamics 365 for Finance and
             Operations (D365FO). ...
           </div>
-          <a href="#" class="cases-item__more">Learn more</a>
+          <a href="#modal-case" class="cases-item__more" rel="modal:open">Learn more</a>
         </div>
         <div class="cases-item">
           <div class="cases-item__title">Integration with the voice control system in the warehouse</div>
           <div class="cases-item__desc">
             Another interesting challenge for us was integrating the Warehouse...
           </div>
-          <a href="#" class="cases-item__more">Learn more</a>
+          <a href="#modal-case" class="cases-item__more" rel="modal:open">Learn more</a>
         </div>
         <div class="cases-item">
           <div class="cases-item__title">Integration with MES systems</div>
@@ -102,7 +121,7 @@
             When implementing Microsoft Dynamics 365 Supply Chain Management (D365SCM) in manufacturing enterprises,
             management faces an important...
           </div>
-          <a href="#" class="cases-item__more">Learn more</a>
+          <a href="#modal-case" class="cases-item__more" rel="modal:open">Learn more</a>
         </div>
       </div>
     </section>
@@ -249,8 +268,69 @@
       </div>
     </div>
   </footer>
+  <div class="modal modal-case" id="modal-case">
+    <div class="modal-case__header">
+      <a href="#" class="modal-case__arrow modal-case__arrow--left">
+        <img src="./assets/img/left.png" alt="">
+      </a>
+      <div class="modal-case__title"> Мigration to Cloud D365FO</div>
+      <a href="#" class="modal-case__arrow modal-case__arrow--right">
+        <img src="./assets/img/right.png" alt="">
+      </a>
+    </div>
+    <div class="modal-case__body">
+      <div class="modal-case__column">
+        <div class="modal-case__item">
+          <div class="modal-case__item-title">Client Challenge</div>
+          <div class="modal-case__item-desc">
+            The client faced a key question: “Should we migrate to a cloud platform?” They sought to simplify IT
+            management, enhance security, and reduce costs, but migrating an ERP system like Dynamics 365 Finance &
+            Operations (D365FO) involved risks, particularly with data access and integration restructuring
+          </div>
+        </div>
+        <div class="modal-case__item">
+          <div class="modal-case__item-title">Results</div>
+          <div class="modal-case__item-desc">
+            - Reduced IT costs and enhanced system security.
+            - Improved scalability and flexibility with Azure’s ecosystem.
+            - Seamless access to advanced Microsoft cloud services.
+          </div>
+        </div>
+        <div class="modal-case__item">
+          <div class="modal-case__item-title">Why Us</div>
+          <div class="modal-case__item-desc">
+            With proven expertise in cloud migrations, we ensure a smooth transition tailored to your business needs.
+          </div>
+        </div>
+      </div>
+      <div class="modal-case__column">
+        <div class="modal-case__item">
+          <div class="modal-case__item-title">Objective</div>
+          <div class="modal-case__item-desc">
+            Enable a seamless migration to Microsoft’s cloud platform, ensuring scalability, cost efficiency, and access
+            to advanced Azure tools.
+          </div>
+        </div>
+        <div class="modal-case__item">
+          <div class="modal-case__item-title">Our Approach</div>
+          <div class="modal-case__item-desc">
+            - Assessment: Reviewed the client’s infrastructure and identified migration requirements.- Migration
+            Execution:
+            Transferred data and optimized integrations for the cloud. Leveraged Azure tools like Power Platform and
+            DevOps for scalability and reliability. Support: Provided training to ensure smooth adoption of the new
+            system.
+          </div>
+        </div>
+        <div class="modal-case__item">
+          <img src="./assets/img/m-1.png" alt="" class="modal-case__item-icon">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 
   <script src="./assets/libs/jquery-3.7.1.min.js"></script>
+  <script src="./assets/libs/modal/jquery.modal.min.js"></script>
   <script src="./assets/libs/swiper/swiper-bundle.min.js"></script>
   <script src="./index.js"></script>
 </body>

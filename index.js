@@ -28,6 +28,22 @@ $(document).ready(function () {
       nextEl: ".reviews__arrows--reviews .reviews__arrow--right",
       prevEl: ".reviews__arrows--reviews .reviews__arrow--left",
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        centeredSlides: false,
+        loop: true,
+      },
+      768: {
+        slidesPerView: 1,
+        centeredSlides: false,
+        loop: true,
+      },
+      990: {
+        slidesPerView: "auto",
+        centeredSlides: true,
+      }
+    },
   });
 
   //cлайдер логотипов
@@ -52,5 +68,12 @@ $(document).ready(function () {
       nextEl: ".reviews__arrows--career .reviews__arrow--right",
       prevEl: ".reviews__arrows--career .reviews__arrow--left",
     },
+  });
+
+  //мобильное меню
+  $(".header__burger").on("click", function (e) {
+    e.preventDefault();
+    $(this).toggleClass("header__burger--active");
+    $(".header").toggleClass("header--open");
   });
 });
