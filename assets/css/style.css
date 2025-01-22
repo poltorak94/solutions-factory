@@ -254,12 +254,51 @@ body {
 .hero {
   min-height: 604px;
   margin-top: 77px;
-  background: url("../img/hero-img.jpg") no-repeat;
   background-position: bottom;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+.hero--main {
+  min-height: auto;
+  position: relative;
+}
+.hero--main .hero__slide {
+  position: relative;
+  min-height: 604px;
+  display: flex;
+  align-items: flex-end;
+}
+@media (max-width: 989px) {
+  .hero--main .hero__slide {
+    min-height: 450px;
+  }
+}
+@media (max-width: 479px) {
+  .hero--main .hero__slide {
+    min-height: 320px;
+  }
+}
+.hero--main .hero__dots-container {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  bottom: 38%;
+}
+.hero--main .hero__container {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.hero--main .hero__slide-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .hero--services {
   background: url("../img/services-hero.jpg") no-repeat;
@@ -298,6 +337,7 @@ body {
 .hero__slider {
   overflow: hidden;
   color: #fff;
+  position: relative;
 }
 .hero ul {
   line-height: 130%;
@@ -339,7 +379,8 @@ body {
   transition: 200ms ease all;
   background: #e42038;
   border-radius: 100px;
-  padding: 0 15px 3px 15px;
+  padding: 3px 15px 4px 15px;
+  line-height: normal;
   min-width: 207px;
 }
 .btn:hover {
